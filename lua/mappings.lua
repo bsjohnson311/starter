@@ -35,7 +35,7 @@ require('leap').opts.equivalence_classes = {
 -- explicitly invoking Leap:
 require('leap.user').set_repeat_keys('<enter>', '<backspace>')
 
-map('n', '<leader>fg', builtin.git_files, { desc = 'Telescope tracked files' })
+map('n', '<leader>fg', require('telescope.builtin').git_files, { desc = 'Telescope tracked files' })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
