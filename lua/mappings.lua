@@ -5,8 +5,10 @@ require "nvchad.mappings"
 --
 --
 --
-vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
-vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
+local map = vim.keymap.set
+
+map({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+map('n',             'S', '<Plug>(leap-from-window)')
 
 -- Highly recommended: define a preview filter to reduce visual noise
 -- and the blinking effect after the first keypress
@@ -33,7 +35,7 @@ require('leap').opts.equivalence_classes = {
 -- explicitly invoking Leap:
 require('leap.user').set_repeat_keys('<enter>', '<backspace>')
 
-local map = vim.keymap.set
+map('n', '<leader>fg', builtin.git_files, { desc = 'Telescope tracked files' })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
