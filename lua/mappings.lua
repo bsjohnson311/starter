@@ -37,9 +37,9 @@ require('leap.user').set_repeat_keys('<enter>', '<backspace>')
 
 map('n', '<leader>fg', require('telescope.builtin').git_files, { desc = 'Telescope tracked files' })
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
-map('n', '<leader>|', '<cmd>vsplit<CR>')
+map('n', '<leader>%', '<cmd>vsplit<CR>')
 map('n', '<leader>\"', '<cmd>split<CR>')
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
